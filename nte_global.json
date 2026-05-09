@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "display_name": "Neverness to Everness (Global)",
+  "biz": "nte_global",
+  "latest_version": "1.0.6",
+  "game_versions": [
+    {
+      "metadata": {
+        "versioned_name": "Neverness to Everness 1.0.6 (Global)",
+        "version": "1.0.6",
+        "download_mode": "DOWNLOAD_MODE_FILE",
+        "game_hash": "",
+        "index_file": "",
+        "res_list_url": ""
+      },
+      "assets": {
+        "game_icon": "https://raw.githubusercontent.com/Sankaiii/Zailon-game/main/assets/nte_icon.png",
+        "game_background": "https://raw.githubusercontent.com/Sankaiii/Zailon-game/main/assets/nte_background.jpg",
+        "game_live_background": ""
+      },
+      "game": {
+        "full": [
+          {
+            "name": "YH_Singapore_common_setup_1.0.6.0423_20260424.exe",
+            "url": "https://ntecdn2.perfectworld.com/clientRes/installer-Global/YH_Singapore_common_setup_1.0.6.0423_20260424.exe",
+            "size": 0,
+            "hash": ""
+          }
+        ],
+        "diff": []
+      },
+      "audio": {
+        "full": [],
+        "diff": []
+      }
+    }
+  ],
+  "telemetry_hosts": [],
+  "paths": {
+    "audio_pkg_res_dir": "",
+    "exe_filename": "NTE.exe",
+    "installation_dir": "Neverness to Everness",
+    "screenshot_dir": "",
+    "screenshot_dir_relative_to": ""
+  },
+  "assets": {
+    "game_icon": "https://raw.githubusercontent.com/Sankaiii/Zailon-game/main/assets/nte_icon.png",
+    "game_background": "https://raw.githubusercontent.com/Sankaiii/Zailon-game/main/assets/nte_background.jpg",
+    "game_live_background": ""
+  },
+  "extra": {
+    "preload": null,
+    "switches": {
+      "fps_unlocker": false,
+      "jadeite": false,
+      "xxmi": false,
+      "graphics_api": false
+    }
+  }
+}
