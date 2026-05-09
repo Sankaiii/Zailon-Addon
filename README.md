@@ -1,6 +1,6 @@
-# TwintailLauncher
+# Zailon Launcher
 <!-- TOC -->
-* [TwintailLauncher](#twintaillauncher)
+* [Zailon Launcher](#twintaillauncher)
   * [About](#about)
     * [Supported games](#supported-games)
     * [Screenshots](#screenshots)
