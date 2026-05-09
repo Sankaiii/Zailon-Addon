@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/USER/REPO/main/assets/banner.png">
+  <img src="assets/banner.jpg">
 </p>
 
 # Zailon Launcher
