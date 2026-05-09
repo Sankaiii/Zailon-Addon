@@ -105,35 +105,13 @@ jobs:
         run: |
           $file = Get-ChildItem -Path './src-tauri/target/release/bundle/nsis/' -Filter *.exe | Select-Object -First 1
           echo "installer_name=$($file.Name)" >> $env:GITHUB_ENV
-      # Required for the artifact to be available on the GitHub server for windows signing
-      - name: upload-unsigned-artifact
-        if: matrix.platform == 'windows-latest'
-        id: upload-unsigned-artifact
-        uses: actions/upload-artifact@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          path: ./src-tauri/target/release/bundle/nsis/${{ env.installer_name }}
-      - name: sign-windows-build
-        if: matrix.platform == 'windows-latest'
-        id: sign-windows-build
-        uses: signpath/github-action-submit-signing-request@v1
-        with:
-          api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
-          organization-id: '${{ secrets.SIGNPATH_ORG_ID }}'
-          project-slug: '${{ secrets.SIGNPATH_PROJECT_SLUG }}'
-          signing-policy-slug: 'release-signing'
-          artifact-configuration-slug: 'auto_github'
-          github-artifact-id: '${{ steps.upload-unsigned-artifact.outputs.artifact-id }}'
-          wait-for-completion: true
-          output-artifact-directory: './src-tauri/target/release/bundle/nsis/signed'
-      - name: Upload signed installer
+      - name: Upload installer
         if: matrix.platform == 'windows-latest'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: ./src-tauri/target/release/bundle/nsis/signed/${{ env.installer_name }}
+          asset_path: ./src-tauri/target/release/bundle/nsis/${{ env.installer_name }}
           asset_name: ${{ env.installer_name }}
           asset_content_type: application/octet-stream
