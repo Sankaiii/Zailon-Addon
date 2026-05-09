@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/USER/REPO/main/assets/banner.png">
+</p>
+
 # Zailon Launcher
 <!-- TOC -->
 * [Zailon Launcher](#twintaillauncher)
